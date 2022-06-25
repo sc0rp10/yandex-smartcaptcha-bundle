@@ -1,0 +1,13 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Sc\YandexSmartCaptchaBundle\Form\Type\YandexSmartCaptchaType:
+        arguments:
+            $captcha_public_key: '%captcha.site_key%'
+
+    Sc\YandexSmartCaptchaBundle\Validator\Constraints\YandexSmartCaptchaValidator:
+        arguments:
+            $captcha_private_key: '%captcha.secret_key%'

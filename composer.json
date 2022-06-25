@@ -1,0 +1,28 @@
+{
+    "name": "sc0/yandex-smartcaptcha-bundle",
+    "description": "An Yandex Smart Captcha Symfony integration",
+    "keywords": ["yandex", "captcha", "smart-captcha"],
+     "homepage": "https://github.com/sc0rp10/yandex-smartcaptcha-bundle",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sc\\YandexSmartCaptchaBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Konstantin Zamyakin",
+            "email": "dev@weblab.pro"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.1",
+        "symfony/http-kernel": "^6.1",
+        "symfony/config": "^6.1",
+        "symfony/form": "^6.1",
+        "symfony/validator": "^6.1",
+        "symfony/dependency-injection": "^6.1"
+    }
+}

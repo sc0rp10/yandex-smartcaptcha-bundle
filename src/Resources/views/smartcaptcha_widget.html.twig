@@ -1,0 +1,5 @@
+{% block yandex_smartcaptcha_widget %}
+    <div class="smart-captcha yandex-smartcaptcha_{{ form.vars.unique_block_prefix }}" data-sitekey="{{ captcha_sitekey }}"></div>
+
+    <script src="https://captcha-api.yandex.ru/captcha.js" async defer></script>
+{% endblock yandex_smartcaptcha_widget %}
