@@ -26,10 +26,10 @@ return [
 #### Configure keys:
 
 ```yaml
-# config.yaml
+# /config/packages/config.yaml
 yandex_smart_captcha:
-    secret_key: foo
-    site_key: bar
+    secret_key: Your_Server_Key
+    site_key: Your_Client_Key
 ```
 
 #### Use new Type in forms
@@ -56,3 +56,16 @@ $builder->add('captcha', YandexSmartCaptchaType::class, [
     </div>
 {% endblock my_own_captcha_wrapper_widget %}
 ```
+
+
+#### Use constraint in forms
+```php
+use Sc\YandexSmartCaptchaBundle\Form\Type\YandexSmartCaptchaType;
+use Sc\YandexSmartCaptchaBundle\Validator\Constraints\YandexSmartCaptcha;
+// ...
+$builder->add('captcha', YandexSmartCaptchaType::class, [
+                'constraints' => [
+                    new YandexSmartCaptcha()
+                ],
+            ]);
+// ...
